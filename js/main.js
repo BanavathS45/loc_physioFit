@@ -97,4 +97,29 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // FAQ Accordion Toggle Handler
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  if (faqQuestions.length > 0) {
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const parentCard = question.closest('.faq-card');
+        const isActive = parentCard.classList.contains('active');
+
+        // Close all other open cards for an accordion experience
+        document.querySelectorAll('.faq-card.active').forEach(card => {
+          if (card !== parentCard) {
+            card.classList.remove('active');
+          }
+        });
+
+        // Toggle current card
+        if (isActive) {
+          parentCard.classList.remove('active');
+        } else {
+          parentCard.classList.add('active');
+        }
+      });
+    });
+  }
 });
