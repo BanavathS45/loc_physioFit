@@ -1396,11 +1396,16 @@ ul {
   background: #ffffff;
   border-radius: 28px;
   border: 1px solid rgba(226, 232, 240, 0.8);
-  box-shadow: 0 16px 40px -10px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 16px 40px -10px rgba(15, 23, 42, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
   overflow: hidden;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s ease;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .doctor-card:hover {
@@ -1603,8 +1608,8 @@ ul {
 .doctor-card-bottom-band {
   height: 12px;
   width: 100%;
-  margin-top: 1.5rem;
-  border-radius: 0 0 24px 24px;
+  margin-top: 1.25rem;
+  border-radius: 0 0 28px 28px;
 }
 
 .band-robert {
@@ -1615,38 +1620,51 @@ ul {
   background: linear-gradient(90deg, #7e22ce 0%, #eab308 100%);
 }
 
-/* Focus header pills matching exact card */
-.banner-robert {
+.doctor-bio-text {
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  min-height: 72px;
+}
+
+/* Core Clinical Focus Banner Pill */
+.focus-header-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 1.15rem;
+  align-self: flex-start;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.theme-robert .focus-header-banner {
   background: linear-gradient(135deg, #0d9488 0%, #0284c7 100%) !important;
-  color: #ffffff;
-  font-size: 0.82rem;
-  font-weight: 800;
-  border-radius: 9999px;
-  padding: 0.45rem 1.25rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
 }
-
-.banner-albin {
+.theme-albin .focus-header-banner {
   background: linear-gradient(135deg, #581c87 0%, #7e22ce 100%) !important;
-  color: #ffffff;
-  font-size: 0.82rem;
-  font-weight: 800;
-  border-radius: 9999px;
-  padding: 0.45rem 1.25rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
 }
 
-/* Icon box with authentic extracted graphic images */
+/* Clinical Rows with Icon Badges */
+.focus-rows-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  flex: 1;
+}
+
 .focus-row-item {
   display: block;
-  padding: 0.95rem 1.25rem;
-  border-radius: 14px;
+  padding: 0.85rem 1.15rem;
+  border-radius: 12px;
   background: #f8fafc;
   border: 1px solid #f1f5f9;
   transition: all 0.25s ease;
@@ -1655,8 +1673,8 @@ ul {
 .focus-row-item:hover {
   background: #ffffff;
   border-color: #cbd5e1;
-  box-shadow: 0 6px 16px -2px rgba(0, 0, 0, 0.05);
-  transform: translateX(4px);
+  box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.05);
+  transform: translateX(3px);
 }
 
 .focus-row-item.highlight-massage-row {
@@ -1675,7 +1693,7 @@ ul {
 }
 
 .focus-row-text {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.45;
   color: #475569;
 }
@@ -1684,8 +1702,9 @@ ul {
   font-weight: 800;
   color: #0f172a;
   display: block;
-  font-size: 0.95rem;
-  margin-bottom: 0.15rem;
+  font-size: 0.94rem;
+  margin-bottom: 0.2rem;
+  letter-spacing: -0.01em;
 }
 
 /* Action Buttons matching the flyer buttons */
@@ -1693,8 +1712,8 @@ ul {
   margin-top: auto;
   display: grid;
   grid-template-columns: 1.3fr 1fr;
-  gap: 1rem;
-  padding-top: 0.5rem;
+  gap: 0.85rem;
+  padding-top: 0.75rem;
 }
 
 .btn-consult-robert {
@@ -1762,9 +1781,6 @@ ul {
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(34, 197, 94, 0.45);
 }
-
-
-
 
 /* ==========================================================================
    OFFICIAL BROCHURE SERVICES UI & HOUSE VISIT HIGHLIGHT
@@ -1920,7 +1936,10 @@ ul {
   justify-content: center;
   font-size: 0.85rem;
   flex-shrink: 0;
-  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 .faq-card.active .faq-toggle-icon {
@@ -1936,7 +1955,9 @@ ul {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.35s ease;
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease;
   padding: 0 1.75rem;
   color: #475569;
   font-size: 0.98rem;
