@@ -1057,17 +1057,30 @@ ul {
     border-radius: 20px;
   }
   .doctor-card-header {
-    flex-direction: column;
+    flex-direction: column !important;
     text-align: center;
-    padding: 1.75rem 1.25rem 1.25rem 1.25rem;
-    gap: 1.25rem;
+    padding: 1.75rem 1.25rem 1.25rem 1.25rem !important;
+    gap: 1rem !important;
+    align-items: center !important;
   }
-  .doctor-circle-wrap {
-    width: 125px;
-    height: 125px;
+  .doctor-robert-photo-box {
+    width: 140px;
+    margin: 0 auto;
+  }
+  .doctor-albin-photo-box {
+    width: 130px;
+    margin: 0 auto;
+  }
+  .doctor-albin-photo-box .doctor-gold-ring {
+    width: 130px;
+    height: 130px;
+  }
+  .doctor-header-top-row {
+    justify-content: center;
   }
   .doctor-card-title {
     font-size: 1.45rem;
+    white-space: normal;
   }
   .doctor-category-badge {
     justify-content: center;
@@ -1084,12 +1097,13 @@ ul {
     padding: 0.45rem 1rem;
   }
   .focus-row-item {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 0.85rem;
+    grid-template-columns: 44px 1fr !important;
+    text-align: left !important;
+    padding: 0.75rem;
+    gap: 0.85rem;
   }
   .focus-icon-box {
-    margin: 0 auto;
+    margin: 0;
   }
   .doctor-action-btns {
     grid-template-columns: 1fr;
@@ -1704,6 +1718,16 @@ ul {
   border-color: #cbd5e1;
   box-shadow: 0 6px 16px -2px rgba(0, 0, 0, 0.05);
   transform: translateX(4px);
+}
+
+.focus-row-item.highlight-massage-row {
+  background: #fdf4ff;
+  border: 1px solid #f0abfc;
+}
+
+.focus-row-item.highlight-massage-row:hover {
+  background: #fae8ff;
+  border-color: #e879f9;
 }
 
 .focus-row-item.highlight-row {
