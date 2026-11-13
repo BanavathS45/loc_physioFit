@@ -1448,9 +1448,16 @@ ul {
 
 .doctor-team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
   margin-top: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .doctor-team-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 .doctor-card {
@@ -1600,7 +1607,7 @@ ul {
 
 .theme-robert .doctor-card-title {
   color: #0f172a;
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   font-weight: 900;
   margin-bottom: 0.35rem;
   line-height: 1.2;
@@ -1608,14 +1615,15 @@ ul {
 
 .theme-robert .doctor-card-subtitle {
   color: #0369a1;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   margin-bottom: 0.65rem;
+  line-height: 1.35;
 }
 
 .theme-albin .doctor-card-title {
   color: #1e1b4b;
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   font-weight: 900;
   margin-bottom: 0.35rem;
   line-height: 1.2;
@@ -1623,9 +1631,10 @@ ul {
 
 .theme-albin .doctor-card-subtitle {
   color: #6b21a8;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   margin-bottom: 0.65rem;
+  line-height: 1.35;
 }
 
 .theme-robert .doctor-degree-pill {
